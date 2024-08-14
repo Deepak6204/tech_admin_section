@@ -28,45 +28,45 @@ function renderEvents() {
     <div class="card-body">
       <div class="row mb-3">
         <div class="col-md-4">
-          <label class="form-label">Event ID</label>
+          <label class="form-label text-white">Event ID</label>
           <input type="text" class="form-control" placeholder="Enter event id" value="${event.id}" readonly>
         </div>
         <div class="col-md-8">
-          <label class="form-label">Event Name</label>
+          <label class="form-label text-white">Event Name</label>
           <input type="text" class="form-control" placeholder="Enter event name" value="${event.event_name}">
         </div>
       </div>
       <div class="row mb-3">
         <div class="col-md-6">
-          <label class="form-label">Event Image</label>
+          <label class="form-label text-white">Event Image</label>
           <input type="text" class="form-control" placeholder="Enter url" value="${event.image_url}">
         </div>
         <div class="col-md-6">
-          <label class="form-label">Description</label>
+          <label class="form-label text-white">Description</label>
           <input type="text" class="form-control" placeholder="Enter event description" value="${event.description}">
         </div>
       </div>
       <div class="row mb-3">
         <div class="col-md-6">
-          <label class="form-label">Rules</label>
+          <label class="form-label text-white">Rules</label>
           <input type="text" class="form-control" placeholder="Enter rules" value="${event.rules}">
         </div>
         <div class="col-md-3">
-          <label class="form-label">Entry Fee</label>
-          <input type="number" class="form-cont rol" placeholder="Enter entry fee" value="${event.entry_fee}">
+          <label class="form-label text-white">Entry Fee</label>
+          <input type="number" class="form-control" placeholder="Enter entry fee" value="${event.entry_fee}">
         </div>
         <div class="col-md-3">
-          <label class="form-label">Prizes</label>
+          <label class="form-label text-white">Prizes</label>
           <input type="text" class="form-control" placeholder="Event prize" value="${event.prize}">
         </div>
       </div>
       <div class="row mb-3">
         <div class="col-md-4">
-          <label class="form-label">Event Lead</label>
+          <label class="form-label text-white">Event Lead</label>
           <input type="text" class="form-control" placeholder="Event lead" value="${event.event_lead}">
         </div>
         <div class="col-md-2">
-          <label class="form-label">Days</label>
+          <label class="form-label text-white">Days</label>
           <select class="form-select" aria-label="Select Day">
             <option value="Day 1" ${event.schedule_day === 'Day 1' ? 'selected' : ''}>Day 1</option>
             <option value="Day 2" ${event.schedule_day === 'Day 2' ? 'selected' : ''}>Day 2</option>
@@ -74,11 +74,11 @@ function renderEvents() {
         </div>
 
         <div class="col-md-3">
-          <label class="form-label">Timing</label>
+          <label class="form-label text-white">Timing</label>
           <input type="text" class="form-control" placeholder="Event event Timing" value="${event.timing}">
         </div>
         <div class="col-md-3">
-          <label class="form-label">Location</label>
+          <label class="form-label text-white">Location</label>
           <input type="text" class="form-control" placeholder="Enter event location" value="${event.location}">
         </div>
       </div>

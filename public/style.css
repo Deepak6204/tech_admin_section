@@ -1,5 +1,8 @@
 body{
-    background-image: url(images/greenbg.jpg);
+    background-image: url(images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .glasseft{
     background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
