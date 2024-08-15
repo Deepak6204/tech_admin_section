@@ -66,16 +66,23 @@
 
 
     <div class="container mt-5">
-        <h1 style="color: white; align-items: center; text-align: center; text-decoration: underline;">Event Management Admin Section</h1>
-        <h1 class="m-auto text-white">Events</h1>
-        <button class="btn btn-primary" onclick="addEvent()">Add Event</button>
-
-        <div class="add-event-container mb-4">
-            <input type="text" id="filter" class="form-control mt-2" placeholder="Filter by Event Name">
+        <h1 style="color: white; align-items: center; text-align: center; text-decoration: underline; margin-bottom: 30px;">Event Management Admin Section</h1>
+        <!-- <h1 class="m-auto text-white">Events</h1> -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <button class="btn btn-primary" onclick="addEvent()">Add Event</button>
+    
+            <div class="add-event-container mb-4" style="display: flex; gap: 10px; width: 40%;">
+                <input type="text" id="filter" class="form-control mt-2" placeholder="Filter by Event Name">
+                <select id="dayFilter" class="form-select mt-2">
+                    <option value="">All Days</option>
+                    <option value="Day 1">Day 1</option>
+                    <option value="Day 2">Day 2</option>
+                </select>
+            </div>
         </div>
 
 
-        <div  id="events"></div>
+        <div id="events"></div>
     </div>
     <script>
         $(document).ready(function () {
@@ -92,6 +99,28 @@
                 });
             });
         });
+        $(document).ready(function () {
+    // Function to filter events based on input and day filter
+    $('#filter, #dayFilter').on('input change', function () {
+        var filterValue = $('#filter').val().toLowerCase();
+        var dayFilterValue = $('#dayFilter').val();
+
+        $('.event-container').each(function () {
+            var eventName = $(this).find('input[type="text"]').eq(1).val().toLowerCase();
+            var eventDay = $(this).find('select').val();
+
+            var matchesName = eventName.includes(filterValue);
+            var matchesDay = !dayFilterValue || eventDay === dayFilterValue;
+
+            if (matchesName && matchesDay) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+});
+
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -40,7 +40,7 @@ function renderEvents() {
         <div class="col-md-6">
           <label class="form-label text-white">Event Image</label>
           <input type="text" class="form-control" placeholder="Enter url" value="${event.image_url}">
-        </div>
+        </div>a
         <div class="col-md-6">
           <label class="form-label text-white">Description</label>
           <input type="text" class="form-control" placeholder="Enter event description" value="${event.description}">
